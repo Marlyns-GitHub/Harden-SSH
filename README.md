@@ -27,3 +27,5 @@ Note :
 - Both authentication methods can be used password and publickey, by default password is used.
 - If you want to use publickey, you must generate an ssh key and copy it to the remote server.
 - The user who executes the script will automatically be a member of the sshgroup.
+
+Reference : https://www.cisecurity.org/cis-benchmarks
