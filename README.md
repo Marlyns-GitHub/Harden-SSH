@@ -23,18 +23,18 @@ This script has been tested in several Linux distributions such as Ubuntu 20 to 
 Note : 
     - For the Redhat distribution family SELINUX must be disabled.
     - keep in mind that, multifactor authentication will apply by defaut for all users.
-    - Both authentication methods can be used password and publickey, by default password is used. 
+    - Both authentication methods can be used password and publickey, by default password is used.
     - If you want to use publickey, you must generate an ssh key and copy it to the remote server.
 
 2. In case.
 
-1. To disabled SELINUX, Edit /etc/selinux/config, change enforcing to disabled
+To disabled SELINUX, Edit /etc/selinux/config, change enforcing to disabled
 
 SELINUX=disabled
 
 After that, restart the server
 
-2. If you want to apply MFA only to some users, edit /etc/pam.d/sshd file and add nullok.
+If you want to apply MFA only to some users, edit /etc/pam.d/sshd file and add nullok.
 
 auth required pam_google_authenticator.so nullok
 
@@ -43,11 +43,11 @@ After that, restart Secure shell service
 For Debian Family : systemclt restart ssh
 For RedHat Family : systemclt restart sshd
 
-3. I limited SSH connection only to menbers of the sshgroup, add user to group
+I limited SSH connection only to menbers of the sshgroup, add user to group
 
 usermod -aG sshgroup username
 
-4. If you want to use publickey authentication method
+If you want to use publickey authentication method
 - Generate sshkey on your management host and copy the pubkey to the remote server
 
     ssh-keygen -t ed25519 -C "your_email@example.com"
