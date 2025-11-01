@@ -11,7 +11,7 @@ That's why I wrote this script shell to simplify Secure Shell hardening and mult
 
 How a simple step can stop a cyberattack before they start, Security by defaut like deny-by-default, MFA enforcement can eliminate risks. The simple strategies create a hardened environment that attackers can't easy penetrate.
 
-1. Usage
+1. Use
 
 This script has been tested in several Linux distributions such as Ubuntu 20 to 24, Debian 12, Fedora 40 and Rocky 9 Linux. You can test the script with other Linux distributions and let me know. Not mush about requirements :
 
@@ -19,7 +19,7 @@ This script has been tested in several Linux distributions such as Ubuntu 20 to 
 - Disable SELINUX for RedHat distribution family
 - Run the script Harden-SSH
 
-Note : For the configurations complement, see on the PDF file.
+Note : For additional configuration see PDF file.
 
 - For the Redhat distribution family SELINUX must be isabled.
 - keep in mind that, multifactor authentication will apply by defaut for all users.        
