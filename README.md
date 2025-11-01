@@ -13,7 +13,7 @@ How a simple step can stop a cyberattack before they start, Security by defaut l
 
 1. Use
 
-This script has been tested in several Linux distributions such as Ubuntu 20 to 24, Debian 12, Fedora 40 and Rocky 9 Linux. You can test the script with other Linux distributions and let me know. Not mush about requirements :
+This script has been tested on several Linux distributions such as Ubuntu 20 to 24, Debian 12, Fedora 40 and Rocky 9 Linux. You can test the script with other Linux distributions and let me know. Not mush about requirements :
 
 - Update Operating System
 - Disable SELINUX for RedHat distribution family
