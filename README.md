@@ -20,17 +20,20 @@ This script has been tested in several Linux distributions such as Ubuntu 20 to 
 
 Note :       
 
-- For the Redhat distribution family SELINUX must be isabled.                                              - keep in mind that, multifactor authentication will apply by defaut for all users.                       - Both authentication methods can be used password and publickey, by default password is used.             - If you want to use publickey, you must generate an ssh key and copy it to the remote server.         
+- For the Redhat distribution family SELINUX must be isabled.
+- keep in mind that, multifactor authentication will apply by defaut for all users.        
+- Both authentication methods can be used password and publickey, by default password is used.
+- If you want to use publickey, you must generate an ssh key and copy it to the remote server.         
 
 2. In case.
 
-To disabled SELINUX, Edit /etc/selinux/config, change enforcing to disabled
+a) To disabled SELINUX, Edit /etc/selinux/config, change enforcing to disabled
 
 SELINUX=disabled
 
 After that, restart the server
 
-If you want to apply MFA only to some users, edit /etc/pam.d/sshd file and add nullok.
+b) If you want to apply MFA only to some users, edit /etc/pam.d/sshd file and add nullok.
 
 auth required pam_google_authenticator.so nullok
 
@@ -39,11 +42,11 @@ After that, restart Secure shell service
 For Debian Family : systemclt restart ssh                                                                  
 For RedHat Family : systemclt restart sshd
 
-I limited SSH connection only to menbers of the sshgroup, add user to group
+c) I limited SSH connection only to menbers of the sshgroup, add user to group
 
 usermod -aG sshgroup username
 
-If you want to use publickey authentication method
+d) If you want to use publickey authentication method
 - Generate sshkey on your management host and copy the pubkey to the remote server
 
     ssh-keygen -t ed25519 -C "your_email@example.com"                                                      
@@ -53,7 +56,7 @@ If you want to use publickey authentication method
 
 PasswordAuthentication no                                                               PubkeyAuthentication yes
 
-Match Group sshgroup                                                                                       
+Match Group sshgroup                                                                                 
             PubkeyAuthentication yes                                                                       
             KbdInteractiveAuthentication yes                                                               
             AuthenticationMethods publickey keyboard-interactive                                           
