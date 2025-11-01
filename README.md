@@ -19,8 +19,9 @@ This script has been tested in several Linux distributions such as Ubuntu 20 to 
 - Disable SELINUX for RedHat distribution family
 - Run the script Harden-SSH
 
-Note : For additional configuration see PDF file.
+Note : 
 
+- For additional configuration see PDF file.
 - For the Redhat distribution family SELINUX must be isabled.
 - keep in mind that, multifactor authentication will apply by defaut for all users.        
 - Both authentication methods can be used password and publickey, by default password is used.
