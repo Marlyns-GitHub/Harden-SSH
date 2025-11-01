@@ -17,13 +17,15 @@ This script has been tested in several Linux distributions such as Ubuntu 20 to 
 
 - Update Operating System
 - Disable SELINUX for RedHat distribution family
+- Run the script Harden-SSH
 
 Note :       
 
 - For the Redhat distribution family SELINUX must be isabled.
 - keep in mind that, multifactor authentication will apply by defaut for all users.        
 - Both authentication methods can be used password and publickey, by default password is used.
-- If you want to use publickey, you must generate an ssh key and copy it to the remote server.         
+- If you want to use publickey, you must generate an ssh key and copy it to the remote server.
+- The user who executes the script will automatically be a member of the sshgroup.     
 
 2. In case.
 
